@@ -1,1 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void ReadNumbers(float &a, float &d)
+{
+    cout << "Enter Number A ? " << endl;
+    cin >> a;
+    cout << "Enter Number D ? " << endl;
+    cin >> d;
+}
+float CalculateRectangleareaThroughDiagonalandSideArea(float a, float d)
+{
+    return a * sqrt(pow(d, 2) - pow(a, 2)); 
+}
+void PrintResults(float Area)
+{
+    cout << "Rectangle area Through Diagonal and Side Area= " << Area << endl;
+
+}
+int main()
+{
+    float a, d;
+
+    ReadNumbers(a, d);
+    PrintResults(CalculateRectangleareaThroughDiagonalandSideArea(a, d));
+    
+  
+    return 0;
+}
+
 
