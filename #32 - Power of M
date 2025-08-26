@@ -1,1 +1,38 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int ReadBaseNumber()
+{
+	int Number;
+	cout << "Please Enter Number? " << endl;
+	cin >> Number;
+	return Number;
+}
+int ReadPower()
+{
+	int Power;
+	cout << "Please Enter Power? " << endl;
+	cin >> Power;
+	return Power;
+}
+int PowerOfM(int Number,int Power)
+{
+	if (Power == 0)
+	{
+		return 1;
+	}
+	int P = 1;
+	for (int i = 1; i <= Power; i++)
+	{
+		P *= Number;
+	}
+
+	return P;
+}
+int main()
+{
+	cout << endl<<"Result = "<< PowerOfM(ReadBaseNumber(), ReadPower());
+
+	return 0;
+}
 
