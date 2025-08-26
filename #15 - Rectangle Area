@@ -1,1 +1,29 @@
+#include <iostream>
+using namespace std;
+
+
+void ReadNumber(float &a,float &b)
+{
+    cout << "Enter A ?" << endl;
+    cin >> a;
+    cout << "Enter B ?" << endl;
+    cin >> b;
+}
+float CalculateRectangleArea(float a, float b)
+{
+    return a * b;
+}
+void PrintResult(float Area)
+{
+    cout << "Rectangle Area= " << Area << endl;
+}
+int main()
+{
+    
+    float A, B;
+    ReadNumber(A,B);
+    PrintResult(CalculateRectangleArea(A, B));
+    return 0; 
+}
+
 
