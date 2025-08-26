@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int ReadNum()
+{
+    int Number;
+    cout << "Enter Number ? " << endl;
+    cin >> Number;
+    return Number;
+}
+float CalculateHalfNumber(int Num)
+{
+   return (float) Num / 2;
+}
+void PrintResult(int Num) 
+{
+
+    string Result = "Half Of " + to_string(Num) + " Is " + to_string(CalculateHalfNumber(Num));
+    cout << endl << Result << endl;
+}
+int main()
+{
+    PrintResult(ReadNum());
+    
+    return 0;
+}
+
