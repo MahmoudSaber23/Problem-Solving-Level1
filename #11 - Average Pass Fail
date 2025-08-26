@@ -1,1 +1,48 @@
+#include <iostream>
+using namespace std;
+
+enum enPassFail { Pass = 1, Fail = 2 };
+struct MarksInfo
+{
+    float Mark[3];
+};
+MarksInfo ReadMarks()
+{
+    MarksInfo Info;
+    cout << "Enter Mark 1?" << endl;
+    cin >> Info.Mark[0];
+    cout << "Enter Mark 2?" << endl;
+    cin >> Info.Mark[1];
+    cout << "Enter Mark 3?" << endl;
+    cin >> Info.Mark[2];
+    return Info;
+}
+float AverageOf3Marks(MarksInfo Info)
+{
+    return (float)(Info.Mark[0] + Info.Mark[1] + Info.Mark[2]) / 3;
+}
+enPassFail CheckAverage(float Average)
+{
+    if (Average >= 50)
+        return enPassFail::Pass;
+    else
+        return enPassFail::Fail;
+}
+void PrintResults(float Average)
+{
+    cout << "Average Marks: " << Average << endl;
+
+    if (CheckAverage(Average) == enPassFail::Pass)
+        cout << "\nYou Passed!" << endl;
+    else
+        cout << "\nYou Failed." << endl;
+}
+int main()
+{
+    MarksInfo Info = ReadMarks();
+    float Avg = AverageOf3Marks(Info);
+    PrintResults(Avg);
+
+    return 0;
+}
 
