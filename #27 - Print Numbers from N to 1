@@ -1,1 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int ReadN()
+{
+    int N;
+    cout << "Please Enter Number? " << endl;
+    cin >> N;
+    return N;
+}
+void NTo_1(int N)
+{
+    for (int i = N; i >= 1; i--)
+    {
+        cout <<"\n"<< i << endl;
+    }
+}
+int main()
+{
+    int N = ReadN();
+    NTo_1(N);
+    return 0;
+}
+
 
