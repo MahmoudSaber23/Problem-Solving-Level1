@@ -1,1 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
 
+struct MarksInfo 
+{
+    float Mark[3];
+};
+MarksInfo ReadMarks()
+{
+    MarksInfo Info;
+    cout << "Enter Mark 1?" << endl;
+    cin >> Info.Mark[0];
+    cout << "Enter Mark 2?" << endl;
+    cin >> Info.Mark[1];
+    cout << "Enter Mark 3?" << endl;
+    cin >> Info.Mark[2];
+    return Info;
+}
+float AverageOf3Marks(MarksInfo Info)
+{
+    return (float)(Info.Mark[0] + Info.Mark[1] + Info.Mark[2]) / 3;
+
+}
+void PrintResults(float Average)
+{
+    cout << "___________________________________\n";
+    cout << "\nAverage Marks: " << Average << endl;
+}
+int main()
+{
+    
+    PrintResults(AverageOf3Marks(ReadMarks()));
+
+
+    return 0;
+}
+
+ 
