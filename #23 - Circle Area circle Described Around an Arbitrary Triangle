@@ -1,1 +1,37 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void CircleArea(float &A, float &B, float &C)
+{
+    cout << "Please Enter Number A? " << endl;
+    cin >> A;
+    cout << "Please Enter Number B? " << endl;
+    cin >> B;
+    cout << "Please Enter Number C? " << endl;
+    cin >> C;
+}
+float CircleAreacircleDescribedAroundanArbitraryTriangle(float a, float b, float c)
+{
+    float P, T, Area;
+    const float PI = 3.14;
+    P = (a + b + c) / 2;
+    T = (a * b * c) / (4 * sqrt(P * (P - a) * (P - b) * (P - c)));
+    T = T * T;
+    return Area=PI * T;
+}
+void PrintResults(float Area)
+{
+    cout << "Circle Area circle Described Around an Arbitrary Triangle= " << Area << endl;
+}
+int main()
+{
+    float A, B, C;
+    
+    CircleArea(A, B, C);
+    PrintResults(CircleAreacircleDescribedAroundanArbitraryTriangle(A, B, C));
+    
+    return 0;
+}
+
 
