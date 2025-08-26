@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct StInfo 
+{
+	int Num[3];
+};
+StInfo ReadInfo()
+{
+	StInfo Info;
+	cout << "Enter Number 1 ? " << endl;
+	cin >> Info.Num[0];
+	cout << "Enter Number 2 ? " << endl;
+	cin >> Info.Num[1];
+	cout << "Enter Number 3 ? " << endl;
+	cin >> Info.Num[2];
+	return Info;
+}
+int Sum(StInfo Info)
+{
+	return Info.Num[0] + Info.Num[1] + Info.Num[2];
+}
+void PrintResults(int Result)
+{
+	cout << "\nSum Is = " << Result << endl;
+
+}
+int main()
+{
+
+	PrintResults(Sum(ReadInfo()));
+	return 0;
+}
+
