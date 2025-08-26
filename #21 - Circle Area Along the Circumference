@@ -1,1 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+float ReadL()
+{
+    float L;
+
+    cout << "Enter L ? " << endl;
+    cin >> L;
+    return L;
+
+}
+float  CircleAreaAlongtheCircumference(float L)
+{
+    const float PI = 3.14;
+    return pow(L, 2) / (4 * PI);
+}
+void PrintResults(float Area)
+{
+    cout << "Circle Area Along the Circumference = " << Area << endl;
+}
+int main()
+{
+    PrintResults(CircleAreaAlongtheCircumference(ReadL()));
+    return 0;
+}
+
 
