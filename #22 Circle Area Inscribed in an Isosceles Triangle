@@ -1,1 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+void ReadTriangleData(float &A,float &B)
+{
+    cout << "Enter a? " << endl;
+    cin >> A;
+    cout << "Enter b? " << endl;
+    cin >> B;
+}
+float CircleAreaInscribedinanIsoscelesTriangle(float A, float B)
+{
+    const float PI = 3.14;
+    return (PI * pow(B, 2) / 4) * ((2 * A - B) / (2 * A + B));
+}
+void PrintResults(float Area)
+{
+    cout << "Circle Area Inscribed in an Isosceles Triangle = " << Area << endl;
+}
+
+
+int main()
+{
+    float A, B;
+    ReadTriangleData(A, B);
+    PrintResults(CircleAreaInscribedinanIsoscelesTriangle(A, B));
+   
+    return 0;
+}
+
 
