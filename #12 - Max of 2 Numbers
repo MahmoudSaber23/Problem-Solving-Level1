@@ -1,1 +1,37 @@
 
+#include <iostream>
+#include <string>
+using namespace std;
+struct NumbersInfo 
+{
+    int Number1;
+    int Number2;
+};
+NumbersInfo ReadNumber()
+{
+    NumbersInfo Info;
+    cout << "Enter Number1 ?" << endl;
+    cin >> Info.Number1;
+    cout << "Enter Number2 ?" << endl;
+    cin >> Info.Number2;
+    return Info;
+}
+int CheckMaxOf2(NumbersInfo Info)
+{
+    if (Info.Number1 > Info.Number2)
+        return Info.Number1;
+    else
+        return Info.Number2;
+}
+void PrintResults(int Max)
+{
+    cout << "Max Number: " << Max << endl;
+}
+int main()
+{
+   
+    PrintResults(CheckMaxOf2(ReadNumber()));
+
+    return 0;
+}
+
